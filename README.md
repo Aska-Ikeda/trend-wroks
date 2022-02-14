@@ -1,0 +1,1 @@
+# ADR-TSEJ_Trader-Design
