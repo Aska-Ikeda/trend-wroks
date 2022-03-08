@@ -1,0 +1,81 @@
+@media only screen and (max-width: 1440px) {
+  .completed-btn {
+    width: auto;
+    padding: 0px 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+  body{
+    background: #070B17;
+  }
+  input[type="number"],
+  input[type="text"],
+  input[type="password"],
+  input[type="search"] {
+    height: 40px !important;
+    background: #161A27;
+  }
+  .login-section{
+    width: auto;
+    margin: 0px !important;
+    background: none;
+  }
+  .login-wrap-box>span {
+   font-size: 20px;
+   font-weight: bold;
+   padding: 7px;
+   margin-top: 42px !important;
+  }
+  .login-wrap-box label {
+    padding: 7px;
+  }
+  .btn-confirmation-login{
+    border-radius: 25px;
+    border: none;
+    height: 50px;
+    width: 290px;
+  }
+
+}
+
+@media only screen and (max-width:350px) {
+  .login-section {
+    width: auto;
+  }
+
+  .top-tab-link {
+    font-size: 14px;
+  }
+
+  .f-radio-btn,
+  .m-radio-btn {
+    font-size: 10px;
+  }
+
+  .small-text {
+    font-size: 8px;
+  }
+  .price-item{
+    font-size: 12px;
+  }
+  .sp-trade-label{
+font-size: 12px;
+  }
+  .width-165 {
+    width: 130px;
+}
+.sp-trade-label {
+  color: var(--white-color);
+  width: 90px;
+}
+.width-82 {
+  width: 75px;
+}
+.sp-order-btn{
+  width: 160px;
+}
+}

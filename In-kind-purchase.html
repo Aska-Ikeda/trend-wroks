@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stock - Market</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap/bootstarp.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/media.css" />
+        <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
+        <script src="assets/js/swiper/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/d868f4cf6e.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <section class="medic-section">
+            <!-- Swiper -->
+            <div class="swiper topSlide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide medic-slide">
+                        <h2 class="text-center medic-heading">（5187）クリエートメディック</h2>
+                    </div>
+                    <div class="swiper-slide medic-slide">
+                        <h2 class="text-center medic-heading">（5187）クリエートメディック</h2>
+                    </div>
+                    <div class="swiper-slide medic-slide">
+                        <h2 class="text-center medic-heading">（5187）クリエートメディック</h2>
+                    </div>
+                </div>
+                <div class="swiper-button-next medic-swiper-next"></div>
+                <div class="swiper-button-prev medic-swiper-prev"></div>
+            </div>
+        </section>
+        <section class="prime-price-section">
+            <div class="d-flex justify-content-between">
+                <div class="btn-group w-50">
+                    <a href="#" class="prime-btn mr-2">プライム</a>
+                    <a href="#" class="adr-btn">ADR</a>
+                </div>
+                <div class="price-group d-flex">
+                    <div class="yen-icon mr-2"><i class="fas fa-yen-sign"></i></div>
+                    <div class="dollar-icon"><i class="fas fa-dollar-sign"></i></div>
+                </div>
+            </div>
+        </section>
+        <div id="現物買（注文入力）">
+            <section class="present-box">
+                <div class="row present-price-bar">
+                    <div class="col-3 d-flex flex-column"><span>現在値</span> <span>11:30</span></div>
+                    <div class="col-6 justify-content-center align-items-center d-flex">
+                        <div class="present-price">1,321 <span class="arrow-price">↓</span> <span class="small-present-price">-3</span></div>
+                    </div>
+                    <div class="col-3 justify-content-center align-items-center d-flex"><span class="percent-price">-0.23%</span></div>
+                </div>
+            </section>
+            <section class="In-kind-purchase-title">
+                <div class="text-center">
+                    <h2 class="puchase-h">現物買（注文入力）</h2>
+                </div>
+            </section>
+            <section class="In-kind-purchase py-4">
+                <form action="">
+                    <div class="row">
+                        <div class="col-4">
+                            <label class="formLabel">買付余力</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" placeholder="ーーーーーー円" class="w-100 border-0" />
+                        </div>
+                    </div>
+                    <!-- checkbox -->
+                    <div class="row my-2">
+                        <div class="col-4">
+                            <label class="formLabel">預り区分</label>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex">
+                                <div class="mr-1 w-50">
+                                    <input type="radio" class="btn-check" value="特定" name="options" id="identification" autocomplete="off" />
+                                    <label class="btn f-radio-btn mb-0" for="identification">特定</label>
+                                </div>
+                                <div class="ml-1 w-50">
+                                    <input type="radio" class="btn-check" value="男性" name="options" id="generally" autocomplete="off" />
+                                    <label class="btn m-radio-btn mb-0" for="generally">男性</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--quantity-->
+                    <div class="row my-2">
+                        <div class="col-4">
+                            <label class="formLabel" for="qty">株数</label>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex">
+                                <button class="qtyminus" aria-hidden="true">&minus;</button>
+                                <input type="number" name="qty" id="qty" min="1" max="10" step="1" value="1" class="w-100" />
+                                <button class="qtyplus" aria-hidden="true">&plus;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--quantity-->
+                    <div class="row my-2">
+                        <div class="col-4 d-flex align-items-center">
+                            <label class="formLabel" for="qty2">価格</label>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex my-2">
+                                <div class="mr-1 w-50">
+                                    <input type="radio" class="btn-check" value="指値" name="options" id="limit-price" autocomplete="off" />
+                                    <label class="btn f-radio-btn mb-0" for="limit-price">指値</label>
+                                </div>
+                                <div class="mr-1 w-50">
+                                    <input type="radio" class="btn-check" value="成行" name="options" id="make-trip" autocomplete="off" />
+                                    <label class="btn f-radio-btn mb-0" for="make-trip">成行</label>
+                                </div>
+                                <div class="ml-1 w-50">
+                                    <input type="radio" class="btn-check" value="逆指値" name="options" id="stop-price" autocomplete="off" />
+                                    <label class="btn m-radio-btn mb-0" for="stop-price">逆指値</label>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <button class="qtyminus" aria-hidden="true">&minus;</button>
+                                <input type="number" name="qty" id="qty" min="1" max="10" step="1" value="1" class="w-100" />
+                                <button class="qtyplus" aria-hidden="true">&plus;</button>
+                            </div>
+                            <span class="price-range-text">制限値幅：1,021.0円～1,621.0円</span>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-4">
+                            <label class="formLabel">執行条件</label>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex">
+                                <div class="mr-1 w-50">
+                                    <input type="radio" class="btn-check" value="なし" name="options" id="なし" autocomplete="off" />
+                                    <label class="btn f-radio-btn mb-0" for="なし">なし</label>
+                                </div>
+                                <div class="mr-1 w-50">
+                                    <input type="radio" class="btn-check" value="寄指" name="options" id="寄指" autocomplete="off" />
+                                    <label class="btn f-radio-btn mb-0" for="寄指">寄指</label>
+                                </div>
+                                <div class="ml-1 w-50">
+                                    <input type="radio" class="btn-check" value="引指" name="options" id="引指" autocomplete="off" />
+                                    <label class="btn m-radio-btn mb-0" for="引指">引指</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-4">
+                            <label class="formLabel">取引パスワード</label>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex">
+                                <div class="mr-1 w-75">
+                                    <input type="search" id="form1" class="search-control w-100 search-field" />
+                                </div>
+
+                                <div class="ml-1 w-25 d-flex justify-content-end align-items-center">
+                                    <label class="keep-label mr-2" for="保存">保存</label>
+                                    <input type="checkbox" id="保存" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label class="formLabel">買付余力</label>
+                        </div>
+                        <div class="col-8 align-items-center d-flex">
+                            <div class="align-items-center d-flex">
+                                <label class="keep-label mr-2" for="省略する">省略する</label>
+                                <input type="checkbox" id="省略する" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-md-12">
+                            <div class="btn-group w-100 justify-content-center">
+                                <a href="#" class="return-btn mr-2">戻る</a>
+                                <a href="#" class="confirm-order-btn">確認→発注</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- footer-tab-nav -->
+        <section class="footer-nav-section">
+            <div class="d-flex justify-content-between footer-nav-tab">
+                <ul class="d-flex top-nav-pills flex-wrap">
+                    <li class="footer-nav-item"><a href="sp-login.html" class="footer-links">マーケット</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">口座管理</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">設定</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">注文照会</a></li>
+                </ul>
+            </div>
+        </section>
+    </body>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+</html>

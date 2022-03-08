@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stock - Market</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap/bootstarp.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/media.css" />
+        <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
+        <script src="assets/js/swiper/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/d868f4cf6e.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <section class="medic-section py-2">
+            <!-- top-header -->
+            <h2 class="text-center term-condition-heading">売買条件設定</h2>
+        </section>
+        <!--top tab nav-->
+        <section class="top-tabs-menu-section">
+            <div class="d-flex justify-content-between top-nav-tab">
+                <ul class="nav nav-pills d-flex top-nav-pills justify-content-center">
+                    <li class="top-tab-item"><a data-toggle="tab" href="#プライム買条件設定" class="top-tab-link">プライム買条件設定</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#ADR売条件設定" class="top-tab-link">ADR売条件設定</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#プライム空売条件設定" class="top-tab-link">プライム空売条件設定</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#ADR空売条件設定" class="top-tab-link">ADR空売条件設定</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 信用新規買確認 -->
+        <div id="信用新規買確認">
+            <section class="In-kind-purchase py-4">
+                <div class="common-setting-feild px-2">
+                    <ul class="d-flex align-items-center my-2">
+                        <li class="sp-trade-label align-self-end">現物・信用設定</li>
+                        <li class="d-flex w-75">
+                            <div class="mr-1 w-50">
+                                <input type="checkbox" class="btn-check" value="現物" name="options" id="現物" autocomplete="off" />
+                                <label class="btn kind-radio-btn mb-0" for="現物">現物</label>
+                            </div>
+                            <div class="mr-1 w-50">
+                                <input type="checkbox" class="btn-check" value="信用" name="options" id="信用" autocomplete="off" />
+                                <label class="btn kind-radio-btn mb-0" for="信用">信用</label>
+                            </div>
+                            <div class="mr-1 w-50">
+                                <input type="checkbox" class="btn-check" value="買" name="options" id="買" autocomplete="off" />
+                                <label class="btn kind-radio-btn mb-0" for="買">買</label>
+                            </div>
+                            <div class="w-50">
+                                <input type="checkbox" class="btn-check" value="空売" name="options" id="空売" autocomplete="off" />
+                                <label class="btn kind-radio-btn mb-0" for="空売">空売</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="sp-trade-feilds pb-4">
+                        <ul class="d-flex align-items-center">
+                            <li class="sp-trade-label align-center">銘柄設定</li>
+                            <li class="d-flex flex-column">
+                                <div class="mb-2">
+                                    <select name="" id="銘柄コード" class="stock-code-select">
+                                        <option value="銘柄コード">銘柄コード</option>
+                                    </select>
+                                </div>
+                                <div class="trading-name-area">
+                                    <input class="trading-name-feild" type="number" value="00000" name="" id="" />
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">買い最大回数</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="回" class="width-82" />
+                                <label for="回" class="ml-1">回</label>
+                                <span>デフォルトは1回</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">買い条件</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以下" class="width-82" />
+                                <label for="回" class="ml-1">
+                                    %<br />
+                                    以下
+                                </label>
+                                <span>ADR側終値に対する</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">利益確定設定</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以上" class="width-82" />
+                                <label for="回" class="ml-1">
+                                    %<br />
+                                    以上
+                                </label>
+                                <span>買値に対する</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">買数量設定</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="株" class="width-82" />
+                                <label for="回" class="ml-1">株</label>
+                                <span>株数は単元による</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">損切設定</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以下" class="width-82" />
+                                <label for="回" class="ml-1">
+                                    %<br />
+                                    以下
+                                </label>
+                                <span>買値に対する</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">取引パスワード</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以下" class="width-165" />
+                                <div class="d-flex align-items-center">
+                                    <label class="w-auto mx-2" for="保存">保存</label>
+                                    <input type="checkbox" name="" id="保存" />
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center justify-content-center my-4">
+                            <li class="d-flex align-items-center">
+                                <div class="btn-group w-100 justify-content-center">
+                                    <a href="#" class="sp-cancel-btn mr-2">閉じる</a>
+                                    <a href="#" class="sp-order-btn">確認</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sp-trade-feilds pb-4" style="border-top: 1px solid #33394a;">
+                        <h3 class="bollinger-heading">ボリンジャーバンド買設定</h3>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">現物・信用設定</li>
+                            <li class="d-flex w-75">
+                                <div class="mr-1 w-50">
+                                    <input type="checkbox" class="btn-check" value="現物" name="options" id="現物2" autocomplete="off" />
+                                    <label class="btn kind-radio-btn mb-0" for="現物2">現物</label>
+                                </div>
+                                <div class="mr-1 w-50">
+                                    <input type="checkbox" class="btn-check" value="信用" name="options" id="信用2" autocomplete="off" />
+                                    <label class="btn kind-radio-btn mb-0" for="信用2">信用</label>
+                                </div>
+                                <div class="mr-1 w-50">
+                                    <input type="checkbox" class="btn-check" value="買" name="options" id="買2" autocomplete="off" />
+                                    <label class="btn kind-radio-btn mb-0" for="買2">買</label>
+                                </div>
+                                <div class="w-50">
+                                    <input type="checkbox" class="btn-check" value="空売" name="options" id="空売2" autocomplete="off" />
+                                    <label class="btn kind-radio-btn mb-0" for="空売2">空売</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">買い最大回数</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="回" class="width-82" />
+                                <div class="justify-content-between">
+                                    <label for="回" class="ml-1">回</label>
+                                    <span>デフォルトは1回</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">買い条件</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以下" class="width-82" />
+                                <label for="回" class="ml-1">
+                                    %<br />
+                                    以下
+                                </label>
+                                <span>ADR側終値に対する</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">利益確定設定</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以上" class="width-82" />
+                                <label for="回" class="ml-1">
+                                    %<br />
+                                    以上
+                                </label>
+                                <span>買値に対する</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">買数量設定</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="株" class="width-82" />
+                                <label for="回" class="ml-1">株</label>
+                                <span>株数は単元による</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">損切設定</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以下" class="width-82" />
+                                <label for="回" class="ml-1">
+                                    %<br />
+                                    以下
+                                </label>
+                                <span>買値に対する</span>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center my-2">
+                            <li class="sp-trade-label align-self-end">取引パスワード</li>
+                            <li class="d-flex align-items-center">
+                                <input type="number" value="00000" id="%以下" class="width-165" />
+                                <div class="d-flex align-items-center">
+                                    <label class="w-auto mx-2" for="保存">保存</label>
+                                    <input type="checkbox" name="" id="保存" />
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="d-flex align-items-center justify-content-center my-4">
+                            <li class="d-flex align-items-center">
+                                <div class="btn-group w-100 justify-content-center">
+                                    <a href="#" class="sp-cancel-btn mr-2">閉じる</a>
+                                    <a href="#" class="sp-order-btn">確認</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer-tab-nav -->
+        <section class="footer-nav-section">
+            <div class="d-flex justify-content-between footer-nav-tab">
+                <ul class="d-flex top-nav-pills flex-wrap">
+                    <li class="footer-nav-item"><a href="sp-login.html" class="footer-links">マーケット</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">口座管理</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">設定</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">注文照会</a></li>
+                </ul>
+            </div>
+        </section>
+    </body>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+</html>

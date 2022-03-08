@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stock - Market</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap/bootstarp.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/media.css" />
+        <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
+        <script src="assets/js/swiper/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/d868f4cf6e.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <section class="medic-section py-2">
+            <!-- top-header -->
+            <h2 class="text-center medic-heading">（3116） トヨタ紡織</h2>
+        </section>
+        <section class="prime-price-section">
+            <div class="d-flex justify-content-between">
+                <div class="btn-group w-50">
+                    <a href="#" class="prime-btn mr-2">プライム</a>
+                    <a href="#" class="adr-btn">ADR</a>
+                </div>
+                <div class="price-group d-flex">
+                    <div class="yen-icon mr-2"><i class="fas fa-yen-sign"></i></div>
+                    <div class="dollar-icon"><i class="fas fa-dollar-sign"></i></div>
+                </div>
+            </div>
+        </section>
+        <!--top tab nav-->
+        <section class="top-tabs-menu-section">
+            <div class="d-flex justify-content-between top-nav-tab">
+                <ul class="nav nav-pills d-flex top-nav-pills justify-content-center">
+                    <li class="top-tab-item"><a data-toggle="tab" href="#プライム買条件設定" class="top-tab-link">プライム買条件設定</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#ADR売条件設定" class="top-tab-link">ADR売条件設定</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#プライム空売条件設定" class="top-tab-link">プライム空売条件設定</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#ADR空売条件設定" class="top-tab-link">ADR空売条件設定</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="present-box">
+            <div class="row present-price-bar">
+                <div class="col-3 d-flex flex-column">
+                    <span class="present-value-h">現在値</span>
+                    <span class="present-value-time">14:50</span>
+                </div>
+                <div class="col-6 justify-content-center align-items-center d-flex">
+                    <div class="alert-present-price">2,090<span class="arrow-price">↓</span> <span class="alert-small-present-price">+15</span></div>
+                </div>
+                <div class="col-3 justify-content-center align-items-center d-flex"><span class="alert-percent-price">+1.22%</span></div>
+            </div>
+        </section>
+        <!-- Tab content -->
+        <div class="tab-content">
+            <!-- プライム買条件設定 -->
+            <div id="プライム買条件設定" class="tab-pane active">
+                <section class="success-sale-title">
+                    <div class="text-center">
+                        <h2 class="puchase-h">信用新規空売確認</h2>
+                    </div>
+                </section>
+                <section class="In-kind-purchase py-4">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="formLabel">注文番号</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">3896</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">市場</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">プライム</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">預り区分</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">ーー</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4 d-flex align-items-center">
+                                <label class="formLabel" for="qty2">注文形態</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">逆指値（必須）</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文状況</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">注文前</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文株価</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">1,234円</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文中株数</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">500株</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文日</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">21/09/16</div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-4">
+                            <div class="col-md-12">
+                                <div class="btn-group w-100 justify-content-center">
+                                    <a href="#" class="sp-cancel-btn mr-2">キャンセル</a>
+                                    <a href="#" class="sp-order-btn">発注</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <!-- プライム買条件設定 -->
+            <div id="プライム空売条件設定" class="tab-pane fade">
+                <section class="In-kind-purchase-title">
+                    <div class="text-center">
+                        <h2 class="puchase-h">ボリンジャーバンド信用新規買確認</h2>
+                    </div>
+                </section>
+                <section class="In-kind-purchase py-4">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="formLabel">注文番号</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">3896</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">市場</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">プライム</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">預り区分</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">ーー</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4 d-flex align-items-center">
+                                <label class="formLabel" for="qty2">注文形態</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">逆指値（必須）</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文状況</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">注文前</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文株価</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">1,234円</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文中株数</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">500株</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文日</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">21/09/16</div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-4">
+                            <div class="col-md-12">
+                                <div class="btn-group w-100 justify-content-center">
+                                    <a href="#" class="sp-cancel-btn mr-2">キャンセル</a>
+                                    <a href="#" class="sp-order-btn">発注</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <!-- ADR売条件設定 -->
+            <div id="ADR売条件設定" class="tab-pane fade">
+                <section class="success-sale-title">
+                    <div class="text-center">
+                        <h2 class="puchase-h">ボリンジャーバンド信用新規空売確認</h2>
+                    </div>
+                </section>
+                <section class="In-kind-purchase py-4">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="formLabel">注文番号</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">3896</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">市場</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">プライム</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">預り区分</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">ーー</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4 d-flex align-items-center">
+                                <label class="formLabel" for="qty2">注文形態</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">逆指値（必須）</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文状況</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">注文前</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文株価</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">1,234円</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文中株数</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">500株</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文日</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">21/09/16</div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-4">
+                            <div class="col-md-12">
+                                <div class="btn-group w-100 justify-content-center">
+                                    <a href="#" class="sp-cancel-btn mr-2">キャンセル</a>
+                                    <a href="#" class="sp-order-btn">発注</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <!-- ADR空売条件設定 -->
+            <div id="ADR空売条件設定" class="tab-pane fade">
+                <section class="In-kind-purchase-title">
+                    <div class="text-center">
+                        <h2 class="puchase-h">現物新規買確認</h2>
+                    </div>
+                </section>
+                <section class="In-kind-purchase py-4">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="formLabel">注文番号</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">3896</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">市場</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">プライム</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">預り区分</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">現物</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4 d-flex align-items-center">
+                                <label class="formLabel" for="qty2">注文形態</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">逆指値（必須）</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文状況</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">注文前</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <label class="formLabel">注文株価</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">1,234円</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文中株数</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">500株</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-4">
+                                <div class="d-flex flex-column">
+                                    <label class="formLabel">注文日</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="output-text">21/09/16</div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-4">
+                            <div class="col-md-12">
+                                <div class="btn-group w-100 justify-content-center">
+                                    <a href="#" class="sp-cancel-btn mr-2">キャンセル</a>
+                                    <a href="#" class="sp-order-btn">発注</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <!-- footer-tab-nav -->
+        <section class="footer-nav-section">
+            <div class="d-flex justify-content-between footer-nav-tab">
+                <ul class="d-flex top-nav-pills flex-wrap">
+                    <li class="footer-nav-item"><a href="sp-login.html" class="footer-links">マーケット</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">口座管理</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">設定</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">注文照会</a></li>
+                </ul>
+            </div>
+        </section>
+    </body>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+</html>

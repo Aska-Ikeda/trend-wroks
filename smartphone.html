@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock - Market</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap/bootstarp.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/media.css" />
+    <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
+    <script src="assets/js/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d868f4cf6e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="medic-section">
+        <!-- Swiper -->
+        <div class="swiper topSlide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide medic-slide">
+                    <h2 class="text-center medic-heading">（5187）クリエートメディック</h2>
+                </div>
+                <div class="swiper-slide medic-slide">
+                    <h2 class="text-center medic-heading">（5187）クリエートメディック</h2>
+                </div>
+                <div class="swiper-slide medic-slide">
+                    <h2 class="text-center medic-heading">（5187）クリエートメディック</h2>
+                </div>
+            </div>
+            <div class="swiper-button-next medic-swiper-next"></div>
+            <div class="swiper-button-prev medic-swiper-prev"></div>
+        </div>
+    </section>
+    <section class="prime-price-section">
+        <div class="d-flex justify-content-between">
+            <div class="btn-group w-50">
+                <a href="#" class="prime-btn mr-2">プライム</a>
+                <a href="#" class="adr-btn">ADR</a>
+            </div>
+            <div class="price-group d-flex">
+                <div class="yen-icon mr-2"><i class="fas fa-yen-sign"></i></div>
+                <div class="dollar-icon"><i class="fas fa-dollar-sign"></i></div>
+            </div>
+        </div>
+    </section>
+    <!--top tab nav-->
+    <section class="top-tabs-menu-section">
+        <div class="d-flex justify-content-between top-nav-tab">
+            <ul class="nav nav-pills d-flex top-nav-pills">
+                <li class="top-tab-item"><a data-toggle="tab" href="#チャート" class="top-tab-link">チャート</a></li>
+                <li class="top-tab-item"><a data-toggle="tab" href="#気配値" class="top-tab-link">気配値</a></li>
+                <li class="top-tab-item"><a data-toggle="tab" href="#歩み値" class="top-tab-link">歩み値</a></li>
+            </ul>
+            <a href="#" class="transaction-btn" data-toggle="modal" data-target="#exampleModal">プライム</a>
+        </div>
+    </section>
+    <!-- Tab content -->
+    <div class="tab-content">
+        <!-- チャート -->
+        <div id="チャート" class="tab-pane active">
+            <div class="technical-box">テクニカル</div>
+            <section class="pricing-satus-section">
+                <span class="technical-box">テクニカル</span>
+                <div class="row no-gutters">
+                    <div class="col-3 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">高値<span class="ml-1">1,332</span></div>
+                                <div class="price-item">安値<span class="ml-1">1,307</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">高値<span class="ml-1">1,332</span></div>
+                                <div class="price-item">安値<span class="ml-1">1,307</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">出来高<span class="ml-1">5,890,700</span></div>
+                                <div class="price-item">売買代金<span class="ml-1">7,765,514千円</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <img src="./assets/images/graph/mobile-graph.png" class="w-100" />
+        </div>
+        <!-- 気配値 -->
+        <div id="気配値" class="tab-pane fade">
+            <section class="pricing-satus-section">
+                <div class="row no-gutters">
+                    <div class="col-3 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">高値<span class="ml-1">1,332</span></div>
+                                <div class="price-item">安値<span class="ml-1">1,307</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">高値<span class="ml-1">1,332</span></div>
+                                <div class="price-item">安値<span class="ml-1">1,307</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">出来高<span class="ml-1">5,890,700</span></div>
+                                <div class="price-item">売買代金<span class="ml-1">7,765,514千円</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <table class="table table-striped-step table-dark w-100 text-center" border-collapse:="" collapse;="">
+                    <tbody>
+                        <thead>
+                            <tr>
+                                <th>売数量</th>
+                                <th>値段成行</th>
+                                <th>買数量</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-alert">123,456</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-alert">123,456</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-success">123,456</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123,456</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123,456</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-alert">123,456</span></td>
+                            <td class="contract-price"><span class="contract-alert">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">UNDER</span></td>
+                            <td class="contract-price"><span class="contract-alert">1,234</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </div>
+        <!-- 歩み値 -->
+
+        <div id="歩み値" class="tab-pane fade">
+            <section class="pricing-satus-section">
+                <div class="row no-gutters">
+                    <div class="col-3 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">高値<span class="ml-1">1,332</span></div>
+                                <div class="price-item">安値<span class="ml-1">1,307</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">高値<span class="ml-1">1,332</span></div>
+                                <div class="price-item">安値<span class="ml-1">1,307</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 item-3">
+                        <ul>
+                            <li>
+                                <div class="price-item">出来高<span class="ml-1">5,890,700</span></div>
+                                <div class="price-item">売買代金<span class="ml-1">7,765,514千円</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <table class="table table-striped-step table-dark w-100 text-center" border-collapse:="" collapse;="">
+                    <tbody>
+                        <thead>
+                            <tr>
+                                <th>銘柄名</th>
+                                <th>現在値</th>
+                                <th>前日比</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-alert">123,456</span></td>
+                            <td class="contract-price"><span class="contract-alert">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-alert">123,456</span></td>
+                            <td class="contract-price"><span class="contract-alert">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-success">123,456</span></td>
+                            <td class="contract-price"><span class="contract-success">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123,456</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123,456</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-alert">123,456</span></td>
+                            <td class="contract-price"><span class="contract-alert">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-easy">12:34</span></td>
+                            <td class="step-quote"><span class="step-easy">123</span></td>
+                            <td class="contract-price"><span class="contract-easy">1,234</span></td>
+                        </tr>
+                        <tr>
+                            <td class="step-time"><span class="time-td">12:34</span></td>
+                            <td class="step-quote"><span class="step-alert">123,456</span></td>
+                            <td class="contract-price"><span class="contract-alert">1,234</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+    </div>
+    </div>
+    <!-- footer-tab-nav -->
+    <section class="footer-nav-section">
+        <div class="d-flex justify-content-between footer-nav-tab">
+            <ul class="d-flex top-nav-pills flex-wrap">
+                <li class="footer-nav-item"><a href="sp-login.html" class="footer-links">マーケット</a></li>
+                <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄(プライム)</a></li>
+                <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定(プライム)</a></li>
+                <li class="footer-nav-item"><a href="#" class="footer-links">口座管理</a></li>
+                <li class="footer-nav-item"><a href="#" class="footer-links">設定</a></li>
+                <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄（ADR）</a></li>
+                <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定（ADR）</a></li>
+                <li class="footer-nav-item"><a href="#" class="footer-links">注文照会</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered m-auto">
+            <div class="modal-content medic-content mx-3">
+                <div class="modal-header medic-title">
+                    <h5 class="modal-title" id="exampleModalLabel">（5187）クリエートメディック</h5>
+                </div>
+                <div class="modal-body medic-content-Body">
+                    <div class="kind-trading">
+                        <h3 class="text-center trading-title">現物取引</h3>
+                    </div>
+                    <div class="btn-group w-100 justify-content-center my-3">
+                        <a href="" class="amaranth-btn mr-2">現物買</a>
+                        <a href="" class="cerulean-btn">現物売</a>
+                    </div>
+                    <div class="kind-trading">
+                        <h3 class="text-center trading-title">信用取引</h3>
+                    </div>
+                    <div class="btn-group w-100 justify-content-center my-3">
+                        <a href="" class="amaranth-btn mr-2">信用新規買</a>
+                        <a href="" class="cerulean-btn">信用新規売</a>
+                    </div>
+                    <div class="btn-group w-100 justify-content-center">
+                        <a href="" class="amaranth-btn mr-2">信用返済売</a>
+                        <a href="" class="cerulean-btn">信用返済買</a>
+                    </div>
+                    <div class="d-flex justify-content-center flex-column align-items-center my-2">
+                        <a href="" class="moon-yelloe-btn my-2">注文訂正・取消</a>
+                        <a type="button" class="licorice-btn" data-dismiss="modal">閉じる</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/jquery/jquery.min.js"></script>
+<script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+
+</html>

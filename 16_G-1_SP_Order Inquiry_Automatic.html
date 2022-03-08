@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stock - Market</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap/bootstarp.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/media.css" />
+        <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
+        <script src="assets/js/swiper/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/d868f4cf6e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="medic-section py-2">
+            <!-- top-header -->
+            <h2 class="text-center term-condition-heading">注文照会</h2>
+        </section>
+        <section class="prime-price-section">
+            <div class="d-flex justify-content-between">
+                <div class="btn-group w-50">
+                    <a href="#" class="prime-btn mr-2">プライム</a>
+                    <a href="#" class="adr-btn">ADR</a>
+                </div>
+                <div class="price-group d-flex">
+                    <div class="yen-icon mr-2"><i class="fas fa-yen-sign"></i></div>
+                    <div class="dollar-icon"><i class="fas fa-dollar-sign"></i></div>
+                </div>
+            </div>
+        </section>
+        <!--top tab nav-->
+        <section class="top-tabs-menu-section">
+            <div class="d-flex justify-content-between top-nav-tab">
+                <ul class="nav nav-pills d-flex top-nav-pills">
+                    <li class="top-tab-item"><a data-toggle="tab" href="#自動約定一覧" class="top-tab-link">自動約定一覧</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#ボリンジャ約定一覧" class="top-tab-link">ボリンジャ約定一覧</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#手動約定一覧" class="top-tab-link">手動約定一覧</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#自動未約定一覧" class="top-tab-link">自動未約定一覧</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#ボリンジャ未約定一覧" class="top-tab-link">ボリンジャ未約定一覧</a></li>
+                    <li class="top-tab-item"><a data-toggle="tab" href="#手動未約定一覧" class="top-tab-link">手動未約定一覧</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Tab content -->
+        <div class="tab-content">
+            <!-- 自動約定一覧 -->
+            <div id="自動約定一覧" class="tab-pane active">
+                <section>
+                    <table class="table order-inquiry-table-striped table-dark w-100 text-center order-inquery">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        銘柄 <br />
+                                        市場/預り
+                                    </th>
+                                    <th>
+                                        取引 <br />
+                                        [注文状況]
+                                    </th>
+                                    <th>
+                                        未約定株数 <br />
+                                        [約定状況]
+                                    </th>
+                                    <th>
+                                        注文<br />
+                                        株数
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>日清粉G 2002</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［失効］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>0株</div>
+                                    <div>［未出来］</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>トヨタ紡織 3116</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div class="ocean-green-text">［失効］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>0株</div>
+                                    <div class="ocean-green-text">［未出来］</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>住友ゴム 5110</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>300株</div>
+                                    <div>［一部約定］</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <!-- ボリンジャ約定一覧 -->
+            <div id="ボリンジャ約定一覧" class="tab-pane fade">
+                <section>
+                    <table class="table order-inquiry-table-striped table-dark w-100 text-center order-inquery">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        銘柄 <br />
+                                        市場/預り
+                                    </th>
+                                    <th>
+                                        取引 <br />
+                                        [注文状況]
+                                    </th>
+                                    <th>
+                                        注文単価 <br />
+                                        現在値
+                                    </th>
+                                    <th>
+                                        注文 <br />
+                                        株数
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>日清粉G 2002</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">2,200円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>トヨタ紡織 3116</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">2,200円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>住友ゴム 5110</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">1,150円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <!-- 手動約定一覧 -->
+            <div id="手動約定一覧" class="tab-pane fade">
+                <section>
+                    <table class="table order-inquiry-table-striped table-dark w-100 text-center order-inquery">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        銘柄 <br />
+                                        市場/預り
+                                    </th>
+                                    <th>
+                                        取引 <br />
+                                        [注文状況]
+                                    </th>
+                                    <th>
+                                        約定株数 <br />
+                                        平均約定単価
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>日清粉G 2002</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div class="ocean-green-text">［約定済］</div>
+                                </td>
+                                <td class="shares-average-unit-price">
+                                    <div>500株</div>
+                                    <div class="amaranth-red-text">1,550円</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>トヨタ紡織 3116</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div class="ocean-green-text">［約定済］</div>
+                                </td>
+                                <td class="shares-average-unit-price">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">2,100円</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>住友ゴム 5110</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div class="ocean-green-text">［約定済］</div>
+                                </td>
+                                <td class="shares-average-unit-price">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">1,100円</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <!-- 自動未約定一覧 -->
+            <div id="自動未約定一覧" class="tab-pane fade">
+                <section>
+                    <table class="table order-inquiry-table-striped table-dark w-100 text-center order-inquery">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        銘柄 <br />
+                                        市場/預り
+                                    </th>
+                                    <th>
+                                        取引 <br />
+                                        [注文状況]
+                                    </th>
+                                    <th>
+                                        注文単価 <br />
+                                        現在値
+                                    </th>
+                                    <th>
+                                        注文 <br />
+                                        株数
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>日清粉G 2002</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［失効］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>指値</div>
+                                    <div>1,200円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>トヨタ紡織 3116</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>逆指値</div>
+                                    <div>2,350円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>住友ゴム 5110</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>引値</div>
+                                    <div>1,600円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <!-- ボリンジャ未約定一覧 -->
+            <div id="ボリンジャ未約定一覧" class="tab-pane fade">
+                <section>
+                    <table class="table order-inquiry-table-striped table-dark w-100 text-center order-inquery">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        銘柄 <br />
+                                        市場/預り
+                                    </th>
+                                    <th>
+                                        取引 <br />
+                                        [注文状況]
+                                    </th>
+                                    <th>
+                                        注文単価 <br />
+                                        現在値
+                                    </th>
+                                    <th>
+                                        注文 <br />
+                                        株数
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>日清粉G 2002</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">2,200円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>トヨタ紡織 3116</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">2,100円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>住友ゴム 5110</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-unfinished">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">1,150円</div>
+                                </td>
+                                <td class="no-share-order">
+                                    <div>500株</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <!-- 手動未約定一覧 -->
+            <div id="手動未約定一覧" class="tab-pane fade">
+                <section>
+                    <table class="table order-inquiry-table-striped table-dark w-100 text-center order-inquery">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        銘柄 <br />
+                                        市場/預り
+                                    </th>
+                                    <th>
+                                        取引 <br />
+                                        [注文状況]
+                                    </th>
+                                    <th>
+                                        約定株数 <br />
+                                        平均約定単価
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>日清粉G 2002</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-average-unit-price">
+                                    <div>500株</div>
+                                    <div class="amaranth-red-text">1,550円</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>トヨタ紡織 3116</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-average-unit-price">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">2,100円</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="st-market-custody">
+                                    <div>住友ゴム 5110</div>
+                                    <div>プライム /一般</div>
+                                </td>
+                                <td class="trans-order-status">
+                                    <div>現買</div>
+                                    <div>［注文中］</div>
+                                </td>
+                                <td class="shares-average-unit-price">
+                                    <div>成行</div>
+                                    <div class="amaranth-red-text">1,100円</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+        <!-- footer-tab-nav -->
+        <section class="footer-nav-section">
+            <div class="d-flex justify-content-between footer-nav-tab">
+                <ul class="d-flex top-nav-pills flex-wrap">
+                    <li class="footer-nav-item"><a href="sp-login.html" class="footer-links">マーケット</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定(プライム)</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">口座管理</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">設定</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">登録銘柄（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">売買条件設定（ADR）</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-links">注文照会</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered m-auto">
+                <div class="modal-content medic-content mx-3">
+                    <div class="modal-header medic-title">
+                        <h5 class="modal-title" id="exampleModalLabel">（5187）クリエートメディック</h5>
+                    </div>
+                    <div class="modal-body medic-content-Body">
+                        <div class="kind-trading">
+                            <h3 class="text-center trading-title">現物取引</h3>
+                        </div>
+                        <div class="btn-group w-100 justify-content-center my-3">
+                            <a href="" class="amaranth-btn mr-2">現物買</a>
+                            <a href="" class="cerulean-btn">現物売</a>
+                        </div>
+                        <div class="kind-trading">
+                            <h3 class="text-center trading-title">信用取引</h3>
+                        </div>
+                        <div class="btn-group w-100 justify-content-center my-3">
+                            <a href="" class="amaranth-btn mr-2">信用新規買</a>
+                            <a href="" class="cerulean-btn">信用新規売</a>
+                        </div>
+                        <div class="btn-group w-100 justify-content-center">
+                            <a href="" class="amaranth-btn mr-2">信用返済売</a>
+                            <a href="" class="cerulean-btn">信用返済買</a>
+                        </div>
+                        <div class="d-flex justify-content-center flex-column align-items-center my-2">
+                            <a href="" class="moon-yelloe-btn my-2">注文訂正・取消</a>
+                            <a type="button" class="licorice-btn" data-dismiss="modal">閉じる</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+</html>
