@@ -8,6 +8,14 @@
   src: url(../font/Meiryo-UI/meiryob.ttc);
   font-weight: bold;
 }
+@font-face {
+  font-family: SourceHanSansJP-Bold;
+  src: url(../font/SourceHanSansJP/SourceHanSansJP-Bold.ttf);
+}
+@font-face {
+  font-family: SourceHanSansJP-Regular;
+  src: url(../font/SourceHanSansJP/SourceHanSansJP-Regular.ttf);
+}
 
 * {
   margin: 0px !important;
@@ -47,6 +55,8 @@
 }
 .value-white {
   color: var(--white-color);
+  font-family: SourceHanSansJP-Regular;
+  font-size: 18px!important;
 }
 
 .value-warning {
@@ -85,6 +95,10 @@
 
 span {
   color: var(--white-color);
+}
+button{
+  outline: none;
+  border: none;
 }
 
 button:focus {
@@ -939,6 +953,7 @@ input:focus {
 .medic-heading {
   color: var(--warning);
   font-size: 20px;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .medic-slide {
@@ -971,6 +986,7 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .adr-btn {
@@ -979,11 +995,12 @@ input:focus {
   color: var(--white-color);
   width: 100px;
   height: 42px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .yen-icon {
@@ -1034,12 +1051,14 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .footer-links {
   font-size: 12px;
   color: var(--white-color);
   padding: 0px 5px;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .footer-nav-tab {
@@ -1158,6 +1177,7 @@ input:focus {
   display: flex;
   padding: 5px 0px;
   color: var(--white-color);
+
 }
 
 .present-box {
@@ -1170,6 +1190,7 @@ input:focus {
   position: relative;
   display: flex;
   word-break: break-word;
+  font-family:SourceHanSansJP-Bold;
 }
 
 .alert-present-price {
@@ -1178,6 +1199,7 @@ input:focus {
   position: relative;
   display: flex;
   word-break: break-word;
+  font-family:SourceHanSansJP-Bold;
 }
 
 .cerulean-bg {
@@ -1196,6 +1218,7 @@ input:focus {
   font-size: 20px;
   color: #fff;
   padding: 6.5px;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .small-present-price {
@@ -1204,38 +1227,48 @@ input:focus {
   position: relative;
   top: 5px;
   word-break: keep-all;
+  font-family: SourceHanSansJP-Regular;
 }
-
+.present-value{
+  font-family: SourceHanSansJP-Regular;
+  text-align: center;
+}
 .alert-small-present-price {
   font-size: 14px;
   color: var(--alert-danger);
   position: relative;
   top: 5px;
   word-break: keep-all;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .percent-price {
   font-size: 16px;
   color: var(--success);
+  font-family: SourceHanSansJP-Bold;
 }
 
 .alert-percent-price {
   font-size: 16px;
   color: var(--alert-danger);
+  font-family: SourceHanSansJP-Bold;
 }
 
 .present-value-h {
   font-size: 12px;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .present-value-time {
   font-size: 14px;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .arrow-price {
   color: var(--success);
   display: flex;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .modelLabel {
@@ -1276,6 +1309,7 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .f-radio-btn:hover,
@@ -1319,16 +1353,20 @@ input:focus {
 .price-range-text {
   color: white;
   font-size: 10px;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .formLabel {
   font-size: 16px;
   color: #FFFFFF;
+  font-family: SourceHanSansJP-Regular;
+
 }
 
 .keep-label {
   font-size: 12px;
   color: #fff;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .return-btn {
@@ -1340,6 +1378,8 @@ input:focus {
   height: 41px;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
+  font-size: 20px;
 }
 
 .confirm-order-btn {
@@ -1352,6 +1392,8 @@ input:focus {
   height: 41px;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
+  font-size: 20px;
 }
 
 .search-field {
@@ -1370,6 +1412,7 @@ input:focus {
 
 .small-text {
   font-size: 10px;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .alert-present-value {
@@ -1618,15 +1661,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .time-stock {
-  font-size: 18px;
-  color: var(--white-color);
   justify-content: space-around;
   display: flex;
+  max-width: 150px;
+  margin: auto!important;
+ 
 }
-
+.time-stock span{
+  font-size: 18px;
+  color: var(--white-color);
+  font-family: SourceHanSansJP-Regular;
+}
 .success-present-value {
   font-size: 30px;
   color: #59AB76;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .success-present-sm-value {
@@ -1637,6 +1686,7 @@ input[type=number]::-webkit-outer-spin-button {
 .success-present-sm-value span {
   font-size: 14px;
   color: #59AB76;
+  font-family: SourceHanSansJP-Regular;
 }
 
 .alerts-present-sm-value {
@@ -1665,6 +1715,7 @@ input[type=number]::-webkit-outer-spin-button {
 .output-text {
   color: var(--white-color);
   font-size: 20px;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .sub-form-Label {
@@ -1687,6 +1738,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 20px;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .sp-order-btn {
@@ -1699,6 +1751,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 41px;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .parsel-graph-row {
@@ -1735,6 +1788,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 41px;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .order-correction-btn:hover {
@@ -1751,6 +1805,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 41px;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .cancel-annotations-btn:hover {
@@ -1772,6 +1827,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 41px;
   justify-content: center;
   align-items: center;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .prime-graph-value {
@@ -1859,6 +1915,7 @@ input[type=number]::-webkit-outer-spin-button {
 .term-condition-heading {
   color: var(--white-color);
   font-size: 20px;
+  font-family: SourceHanSansJP-Bold;
 }
 
 .width-82 {

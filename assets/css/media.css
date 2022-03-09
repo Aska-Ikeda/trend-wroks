@@ -16,7 +16,7 @@
   input[type="text"],
   input[type="password"],
   input[type="search"] {
-    height: 40px !important;
+    height: 30px !important;
     background: #161A27;
   }
   .login-section{
@@ -77,5 +77,11 @@ font-size: 12px;
 }
 .sp-order-btn{
   width: 160px;
+}
+.success-present-value {
+  font-size: 20px;
+}
+.time-stock span {
+  font-size: 14px;
 }
 }

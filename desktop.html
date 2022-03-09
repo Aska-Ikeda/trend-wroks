@@ -2074,7 +2074,8 @@
                                             <div class="row no-gutters w-100">
                                                 <div class="col-6">
                                                     <!-- if you want active backgorund for sell-confirmation so add this class *bg-active-sell* -->
-                                                    <div class="sell-confirmation" id="bg-active-sell" onclick="makeActive()">
+                                                    <div class="sell-confirmation" id="bg-active-sell"
+                                                        onclick="makeActive()">
                                                         <ul class="d-flex align-items-end">
                                                             <li class="d-inline-flex mr-1">
                                                                 <div>
@@ -2123,17 +2124,21 @@
                                                                 <label class="注文画面を省略" for="注文画面を省略">注文画面を省略</label>
                                                             </li>
                                                             <li>
-                                                                <a type="button"
-                                                                    class="sell-confirmation-btn font-24 f-bold">
+                                                                <button type="button"
+                                                                    class="sell-confirmation-btn font-24 f-bold" style="display: none;">
                                                                     売り確認
-                                                                </a>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="buy-confirmation-btn font-24 f-bold">買
+                                                                    い</button>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <!-- if you want active backgorund for buy-confirmation so add this class *bg-active-buy* -->
-                                                    <div class="buy-confirmation" id="buy-confirmation" onclick="makeActivesell()">
+                                                    <div class="buy-confirmation" id="buy-confirmation"
+                                                        onclick="makeActivesell()">
                                                         <ul class="d-flex align-items-end">
                                                             <li class="d-inline-flex mr-1">
                                                                 <div>
@@ -2177,13 +2182,18 @@
                                                         </ul>
                                                         <ul class="justify-content-end d-flex align-items-center mt-2">
                                                             <li class="d-flex align-items-center mr-3">
-                                                                <input id="注文画面を省略_buy" type="checkbox" class="mr-1" />
+                                                                <input onclick="OmitDetail(e)" id="注文画面を省略_buy" type="checkbox" class="mr-1" />
                                                                 <label class="注文画面を省略_buy"
                                                                     for="注文画面を省略_buy">注文画面を省略</label>
                                                             </li>
                                                             <li>
-                                                                <a type="button"
-                                                                    class="buy-confirmation-btn font-24 f-bold">買 い</a>
+                                                                <button type="button"
+                                                                    class="sell-confirmation-btn font-24 f-bold" style="display: none;">
+                                                                    売り確認
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="buy-confirmation-btn font-24 f-bold">買
+                                                                    い</button>
                                                             </li>
                                                         </ul>
                                                     </div>

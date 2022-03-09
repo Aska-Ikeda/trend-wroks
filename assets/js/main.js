@@ -13,5 +13,7 @@ function makeActivesell() {
 		element.classList.toggle("bg-active-buy");
 }
 function OmitDetail(e){
-	console.log(e.target.nextSibling.innerHTML);
+	if(e.target.checked){
+		document.getElementById("")
+	}
 }
