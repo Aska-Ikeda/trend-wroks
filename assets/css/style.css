@@ -161,14 +161,22 @@ button:focus {
   background: var(--dark-blue-color) 0% 0% no-repeat padding-box;
   text-align: left;
 }
-
+/* 
 .primary-bar>h1 {
   color: #FFFFFF;
   font-weight: bolder;
   margin: 0px;
   font-size: 26px;
+} */
+.primary-bar >img:nth-child(1){
+  width: 295px;
+  height: 20px;
+  margin-right: 20px !important;
 }
-
+.primary-bar >img:nth-child(2){
+  width: 175px;
+  height: 20px;
+}
 .main-section {
   background: var(--dark-color) 0% 0% no-repeat padding-box;
   min-height: 100vh;
@@ -259,6 +267,8 @@ button:focus {
 .メイン画面 tbody tr:nth-of-type(even),
 .ボリンジャーバンド約定一覧 tbody tr:nth-of-type(even) {
   background-color: var(--dark-color) !important;
+}
+.ボリンジャーバンド約定一覧 table{
 }
 
 .sub-tabs-container {
