@@ -170,12 +170,12 @@ button:focus {
 } */
 .primary-bar >img:nth-child(1){
   width: 295px;
-  height: 20px;
+  height: 32px;
   margin-right: 20px !important;
 }
 .primary-bar >img:nth-child(2){
   width: 175px;
-  height: 20px;
+  height: 36px;
 }
 .main-section {
   background: var(--dark-color) 0% 0% no-repeat padding-box;
