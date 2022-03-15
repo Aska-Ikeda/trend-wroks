@@ -805,6 +805,14 @@ input:focus {
 .sp-footer-login>ul>li>p {
   font-size: 12px;
 }
+.sp-footer-login>ul>li:nth-child(1)>img {
+  height: 40px;
+  width: 294px;
+}
+.sp-footer-login>ul>li:nth-child(2)>img {
+  height: 36px;
+  width: 174px;
+}
 
 .bg-active-sell {
   background: var(--bg-active-sell);
