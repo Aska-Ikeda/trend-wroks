@@ -146,6 +146,10 @@ button:focus {
   height: 209px;
   overflow: scroll;
 }
+.max-h-300 {
+  height: 300px;
+  overflow: scroll;
+}
 .max-h-252 {
   height: 252px;
   overflow: scroll;
