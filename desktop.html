@@ -2073,125 +2073,231 @@
                                                 <li class="ml-3"><span>100株単位/824.0〜1124.0円</span></li>
                                             </ul>
                                             <div class="row no-gutters w-100">
-                                                <div class="col-6">
-                                                    <!-- if you want active backgorund for sell-confirmation so add this class *bg-active-sell* -->
-                                                    <div class="sell-confirmation" id="bg-active-sell"
-                                                        onclick="makeActive()">
-                                                        <ul class="d-flex align-items-end">
-                                                            <li class="d-inline-flex mr-1">
-                                                                <div>
-                                                                    <a type="button" class="stop-order-btn">逆指値へ</a>
-                                                                    <div class="d-flex mt-2">
-                                                                        <div class="mr-1">
-                                                                            <input type="radio" class="btn-radio" hidden
-                                                                                id="指値-confrm" name="confrm"
-                                                                                autocomplete="off" />
-                                                                            <label
-                                                                                class="btn kind-radio-btn mb-0 limit-order-btn"
-                                                                                for="指値-confrm">指値</label>
-                                                                        </div>
+                                                <div class="col-12">
+                                                    <div class="row no-gutters" id="buy_sell_section">
+                                                        <div class="col-6">
+                                                            <!-- if you want active backgorund for sell-confirmation so add this class *bg-active-sell* -->
+                                                            <div class="sell-confirmation" id="bg-active-sell"
+                                                                onclick="makeActive()">
+                                                                <ul class="d-flex align-items-end">
+                                                                    <li class="d-inline-flex mr-1">
                                                                         <div>
-                                                                            <input type="radio" class="btn-radio" hidden
-                                                                                id="成行-confrm" name="confrm"
-                                                                                autocomplete="off" />
-                                                                            <label
-                                                                                class="btn kind-radio-btn mb-0 market-order-btn"
-                                                                                for="成行-confrm">成行</label>
+                                                                            <a type="button" onclick="sellBtn(event)" class="stop-order-btn">逆指値へ</a>
+                                                                            <div class="d-flex mt-2">
+                                                                                <div class="mr-1">
+                                                                                    <input type="radio" class="btn-radio" hidden
+                                                                                        id="指値-confrm" name="confrm"
+                                                                                        autocomplete="off" />
+                                                                                    <label
+                                                                                        class="btn kind-radio-btn mb-0 limit-order-btn"
+                                                                                        for="指値-confrm">指値</label>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <input type="radio" class="btn-radio" hidden
+                                                                                        id="成行-confrm" name="confrm"
+                                                                                        autocomplete="off" />
+                                                                                    <label
+                                                                                        class="btn kind-radio-btn mb-0 market-order-btn"
+                                                                                        for="成行-confrm">成行</label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li
-                                                                class="d-flex flex-column justify-content-between mr-1 h-68">
-                                                                <input type="number" class="w-160 mb-1" />
-                                                                <input type="number" class="w-160" />
-                                                            </li>
-                                                            <li class="d-inline-flex flex-column">
-                                                                <span>株</span>
-                                                                <div class="d-flex">
-                                                                    <div class="d-flex mt-2">
-                                                                        <span class="mr-1"> 円 </span>
-                                                                        <select name="select_option"
-                                                                            class="js-select-option">
-                                                                            <option value="無条件">無条件</option>
-                                                                        </select>
-                                                                    </div>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="justify-content-end d-flex align-items-center mt-2">
-                                                            <li class="d-flex align-items-center mr-3">
-                                                                <input onclick="OmitDetail(event)" id="注文画面を省略"
-                                                                    type="checkbox" class="mr-1" />
-                                                                <label class="注文画面を省略" for="注文画面を省略">注文画面を省略</label>
-                                                            </li>
-                                                            <li id="btn-sell-section">
-                                                                <button type="button"
-                                                                    class="sell-confirmation-btn font-24 f-bold">
-                                                                    売り確認
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <!-- if you want active backgorund for buy-confirmation so add this class *bg-active-buy* -->
-                                                    <div class="buy-confirmation bg-active-buy" id="buy-confirmation"
-                                                        onclick="makeActivesell()">
-                                                        <ul class="d-flex align-items-end">
-                                                            <li class="d-inline-flex mr-1">
-                                                                <div>
-                                                                    <a type="button" class="stop-order-btn">逆指値へ</a>
-                                                                    <div class="d-flex mt-2">
-                                                                        <div class="mr-1">
-                                                                            <input type="radio" class="btn-radio" hidden
-                                                                                id="指値-buy" name="指値-buy"
-                                                                                autocomplete="off" />
-                                                                            <label
-                                                                                class="btn kind-radio-btn mb-0 limit-order-btn"
-                                                                                for="指値-buy">指値</label>
-                                                                        </div>
+                                                                    </li>
+                                                                    <li
+                                                                        class="d-flex flex-column justify-content-between mr-1 h-68">
+                                                                        <input type="number" class="w-160 mb-1" />
+                                                                        <input type="number" class="w-160" />
+                                                                    </li>
+                                                                    <li class="d-inline-flex flex-column">
+                                                                        <span>株</span>
+                                                                        <div class="d-flex">
+                                                                            <div class="d-flex mt-2">
+                                                                                <span class="mr-1"> 円 </span>
+                                                                                <select name="select_option"
+                                                                                    class="js-select-option">
+                                                                                    <option value="無条件">無条件</option>
+                                                                                </select>
+                                                                            </div>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="justify-content-end d-flex align-items-center mt-2">
+                                                                    <li class="d-flex align-items-center mr-3">
+                                                                        <input onclick="OmitDetail(event)" id="注文画面を省略"
+                                                                            type="checkbox" class="mr-1" />
+                                                                        <label class="注文画面を省略" for="注文画面を省略">注文画面を省略</label>
+                                                                    </li>
+                                                                    <li id="btn-sell-section">
+                                                                        <button type="button"
+                                                                            class="sell-confirmation-btn font-24 f-bold">
+                                                                            売り確認
+                                                                        </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <!-- if you want active backgorund for buy-confirmation so add this class *bg-active-buy* -->
+                                                            <div class="buy-confirmation bg-active-buy" id="buy-confirmation"
+                                                                onclick="makeActivesell()">
+                                                                <ul class="d-flex align-items-end">
+                                                                    <li class="d-inline-flex mr-1">
                                                                         <div>
-                                                                            <input type="radio" class="btn-radio" hidden
-                                                                                id="成行-buy" name="指値-buy"
-                                                                                autocomplete="off" />
-                                                                            <label
-                                                                                class="btn kind-radio-btn mb-0 market-order-btn"
-                                                                                for="成行-buy">成行</label>
+                                                                            <a type="button" onclick="buyBtn(event)" class="stop-order-btn">逆指値へ</a>
+                                                                            <div class="d-flex mt-2">
+                                                                                <div class="mr-1">
+                                                                                    <input type="radio" class="btn-radio" hidden
+                                                                                        id="指値-buy" name="指値-buy"
+                                                                                        autocomplete="off" />
+                                                                                    <label
+                                                                                        class="btn kind-radio-btn mb-0 limit-order-btn"
+                                                                                        for="指値-buy">指値</label>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <input type="radio" class="btn-radio" hidden
+                                                                                        id="成行-buy" name="指値-buy"
+                                                                                        autocomplete="off" />
+                                                                                    <label
+                                                                                        class="btn kind-radio-btn mb-0 market-order-btn"
+                                                                                        for="成行-buy">成行</label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li
-                                                                class="d-flex flex-column justify-content-between mr-1 h-68">
-                                                                <input type="number" class="w-160 mb-1" />
-                                                                <input type="number" class="w-160" />
-                                                            </li>
-                                                            <li class="d-inline-flex flex-column">
-                                                                <span>株</span>
-                                                                <div class="d-flex">
-                                                                    <div class="d-flex mt-2">
-                                                                        <span class="mr-1">円</span>
-                                                                        <select name="select_option"
-                                                                            class="js-select-option">
-                                                                            <option value="無条件">無条件</option>
-                                                                        </select>
-                                                                    </div>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="justify-content-end d-flex align-items-center mt-2">
-                                                            <li class="d-flex align-items-center mr-3">
-                                                                <input onclick="BuyOmitDetail(event)" id="注文画面を省略_buy" type="checkbox" class="mr-1" />
-                                                                <label class="注文画面を省略_buy"
-                                                                    for="注文画面を省略_buy">注文画面を省略</label>
-                                                            </li>
-                                                            <li id="btn-buy-section">
-                                                                <button type="button"
-                                                                    class="sell-confirmation-btn font-24 f-bold">
-                                                                    売り確認
-                                                                </button>
-                                                            </li>
-                                                        </ul>
+                                                                    </li>
+                                                                    <li
+                                                                        class="d-flex flex-column justify-content-between mr-1 h-68">
+                                                                        <input type="number" class="w-160 mb-1" />
+                                                                        <input type="number" class="w-160" />
+                                                                    </li>
+                                                                    <li class="d-inline-flex flex-column">
+                                                                        <span>株</span>
+                                                                        <div class="d-flex">
+                                                                            <div class="d-flex mt-2">
+                                                                                <span class="mr-1">円</span>
+                                                                                <select name="select_option"
+                                                                                    class="js-select-option">
+                                                                                    <option value="無条件">無条件</option>
+                                                                                </select>
+                                                                            </div>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="justify-content-end d-flex align-items-center mt-2">
+                                                                    <li class="d-flex align-items-center mr-3">
+                                                                        <input onclick="BuyOmitDetail(event)" id="注文画面を省略_buy" type="checkbox" class="mr-1" />
+                                                                        <label class="注文画面を省略_buy"
+                                                                            for="注文画面を省略_buy">注文画面を省略</label>
+                                                                    </li>
+                                                                    <li id="btn-buy-section">
+                                                                        <button type="button"
+                                                                            class="sell-confirmation-btn font-24 f-bold">
+                                                                            売り確認
+                                                                        </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                    <!--intial hide tabs -->
+                                                    <div id="sell_to_regular_order" class="row no-gutters" style="display: none;">
+                                                        <div class="payment-stop_price px-2" style="height: 129px;">
+                                                            <ul>
+                                                                <li><a type="button" onclick="ToShowSellSection(event)" class="stop-order-btn">通常注文へ</a></li>
+                                                                <li>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <input class="w-160 text-right" type="number"
+                                                                            value="null" />
+                                                                        <label for="" class="ml-2">株</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="d-flex">
+                                                                    <div class="mx-1">
+                                                                        <input type="radio" class="btn-radio" hidden
+                                                                            name="options" id="指値_2" autocomplete="off">
+                                                                        <label
+                                                                            class="btn kind-radio-btn mb-0 limit-order-btn"
+                                                                            for="指値_2">指値</label>
+                                                                    </div>
+                                                                    <div class="mx-1">
+                                                                        <input type="radio" class="btn-radio" hidden
+                                                                            name="options" id="成行_2" autocomplete="off">
+                                                                        <label
+                                                                            class="btn kind-radio-btn mb-0 market-order-btn"
+                                                                            for="成行_2">成行</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <input class="w-160 text-right" type="number"
+                                                                            value="null" />
+                                                                        <label for="" class="ml-2">円</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <select name="select_option" class="js-select-option">
+                                                                        <option value="無条件">無条件</option>
+                                                                    </select>
+                                                                </li>
+                                                                <li class="d-flex align-items-center mx-1">
+                                                                    <input onclick="btnSellCheckRegularOrder(event)" id="btnSellCheckRegularOrder"
+                                                                        type="checkbox" class="mr-1" />
+                                                                    <label class="注文画面を省略" for="btnSellCheckRegularOrder">注文画面を省略</label>
+                                                                </li>
+                                                                <li id="sell_js_to_regular_order">
+                                                                    <a href="" class="completed-btn"> 売り確認 </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div id="buy_to_regular_order" class="row no-gutters" style="display: none;">
+                                                        <div class="payment-stop_price bg-active-buy px-2" style="height: 129px;">
+                                                            <ul>
+                                                                <li><a type="button" onclick="ToShowBuySection(event)" class="stop-order-btn">通常注文へ</a></li>
+                                                                <li>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <input class="w-160 text-right" type="number"
+                                                                            value="null" />
+                                                                        <label for="" class="ml-2">株</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="d-flex">
+                                                                    <div class="mx-1">
+                                                                        <input type="radio" class="btn-radio" hidden
+                                                                            name="options" id="指値_3" autocomplete="off">
+                                                                        <label
+                                                                            class="btn kind-radio-btn mb-0 limit-order-btn"
+                                                                            for="指値_3">指値</label>
+                                                                    </div>
+                                                                    <div class="mx-1">
+                                                                        <input type="radio" class="btn-radio" hidden
+                                                                            name="options" id="成行_3" autocomplete="off">
+                                                                        <label
+                                                                            class="btn kind-radio-btn mb-0 market-order-btn"
+                                                                            for="成行_3">成行</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <input class="w-160 text-right" type="number"
+                                                                            value="null" />
+                                                                        <label for="" class="ml-2">円</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <select name="select_option" class="js-select-option">
+                                                                        <option value="無条件">無条件</option>
+                                                                    </select>
+                                                                </li>
+                                                                <li class="d-flex align-items-center mx-1">
+                                                                    <input onclick="btnBuyCheckRegularOrder(event)" id="btnBuyCheckRegularOrder"
+                                                                        type="checkbox" class="mr-1" />
+                                                                    <label class="注文画面を省略" for="btnBuyCheckRegularOrder">注文画面を省略</label>
+                                                                </li>
+                                                                <li id="buy_js_to_regular_order">
+                                                                    <a href="" class="completed-btn"> 売り確認 </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- intial hide tabs end -->
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="in-kind-wrap">
@@ -2302,54 +2408,62 @@
                                                     </table>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 d-flex my-2">
-                                                    <ul class="labels-ul">
-                                                        <li class="d-flex align-items-center mr-3">
-                                                            <input id="返済売-label" type="radio" name="same-testing" />
-                                                            <label class="返済売" for="返済売-label">返済売</label>
-                                                        </li>
-                                                        <li class="d-flex align-items-center mr-3">
-                                                            <input id="現引" type="radio" name="same-testing" />
-                                                            <label class="現引" for="現引">現引</label>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="payment-stop_price">
-                                                        <ul>
-                                                            <li><a href="#" class="stop-order-btn">逆指値へ</a></li>
-                                                            <li class="value-warning">－－－株</li>
-                                                            <li class="d-flex">
-                                                                <div class="mx-1">
-                                                                    <input type="radio" class="btn-radio" hidden
-                                                                        name="options" id="指値" autocomplete="off">
-                                                                    <label
-                                                                        class="btn kind-radio-btn mb-0 limit-order-btn"
-                                                                        for="指値">指値</label>
-                                                                </div>
-                                                                <div class="mx-1">
-                                                                    <input type="radio" class="btn-radio" hidden
-                                                                        name="options" id="成行" autocomplete="off">
-                                                                    <label
-                                                                        class="btn kind-radio-btn mb-0 market-order-btn"
-                                                                        for="成行">成行</label>
-                                                                </div>
+                                                <div class="col-12 my-2">
+                                                    <div id="" class="d-flex">
+                                                        <ul class="labels-ul">
+                                                            <li class="d-flex align-items-center mr-3">
+                                                                <input id="返済売-label" type="radio" name="same-testing" />
+                                                                <label class="返済売" for="返済売-label">返済売</label>
                                                             </li>
-                                                            <li>
-                                                                <div class="d-flex align-items-center">
-                                                                    <input class="w-160 text-right" type="number"
-                                                                        value="null" />
-                                                                    <label for="" class="ml-2">円</label>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <select name="select_option" class="js-select-option">
-                                                                    <option value="無条件">無条件</option>
-                                                                </select>
-                                                            </li>
-                                                            <li>
-                                                                <a href="" class="completed-btn"> 決 済 </a>
+                                                            <li class="d-flex align-items-center mr-3">
+                                                                <input id="現引" type="radio" name="same-testing" />
+                                                                <label class="現引" for="現引">現引</label>
                                                             </li>
                                                         </ul>
+                                                        <div class="payment-stop_price px-3">
+                                                            <ul>
+                                                                <li><a href="#" class="stop-order-btn">逆指値へ</a></li>
+                                                                <li class="value-warning">－－－株</li>
+                                                                <li class="d-flex">
+                                                                    <div class="mx-1">
+                                                                        <input type="radio" class="btn-radio" hidden
+                                                                            name="options" id="指値" autocomplete="off">
+                                                                        <label
+                                                                            class="btn kind-radio-btn mb-0 limit-order-btn"
+                                                                            for="指値">指値</label>
+                                                                    </div>
+                                                                    <div class="mx-1">
+                                                                        <input type="radio" class="btn-radio" hidden
+                                                                            name="options" id="成行" autocomplete="off">
+                                                                        <label
+                                                                            class="btn kind-radio-btn mb-0 market-order-btn"
+                                                                            for="成行">成行</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <input class="w-160 text-right" type="number"
+                                                                            value="null" />
+                                                                        <label for="" class="ml-2">円</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <select name="select_option" class="js-select-option">
+                                                                        <option value="無条件">無条件</option>
+                                                                    </select>
+                                                                </li>
+                                                                <li class="d-flex align-items-center mx-1">
+                                                                    <input onclick="RepaymentSaleCheck(event)" id="RepaymentSaleCheck"
+                                                                        type="checkbox" class="mr-1" />
+                                                                    <label class="注文画面を省略" for="RepaymentSaleCheck">注文画面を省略</label>
+                                                                </li>
+                                                                <li id="js_repayment_btn">
+                                                                    <a href="" class="completed-btn"> 売り確認 </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
+                                                    <!--  -->
                                                 </div>
                                                 <div class="col-12 py-2">
                                                     <span class="value-warning"><label for="">買付余力：</label> －－－－－</span>
@@ -2409,9 +2523,9 @@
                                                             <label class="現引" for="現引">現引</label>
                                                         </li>
                                                     </ul>
-                                                    <div class="payment-stop_price bg-active-buy">
+                                                    <div class="payment-stop_price bg-active-buy px-2">
                                                         <ul>
-                                                            <li><a href="#" class="stop-order-btn bg-transparent">逆指値へ</a>
+                                                            <li><a href="#" class="stop-order-btn">逆指値へ</a>
                                                             </li>
                                                             <li class="value-warning">－－－株</li>
                                                             <li class="d-flex">
@@ -2442,8 +2556,13 @@
                                                                     <option value="無条件">無条件</option>
                                                                 </select>
                                                             </li>
-                                                            <li>
-                                                                <a href="" class="completed-btn"> 決 済 </a>
+                                                            <li class="d-flex align-items-center mx-1">
+                                                                <input onclick="RepaymentPurchaseCheck(event)" id="RepaymentPurchaseCheck"
+                                                                    type="checkbox" class="mr-1" />
+                                                                <label class="注文画面を省略" for="RepaymentPurchaseCheck">注文画面を省略</label>
+                                                            </li>
+                                                            <li id="js_repayment_Purchase_btn">
+                                                                <a href="" class="completed-btn"> 売り確認 </a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -2519,8 +2638,15 @@
                                                         </li>
                                                         <li>
                                                             <div class="d-flex">
-                                                                <a type="button" class="correction-btn">訂 正</a>
-                                                                <a type="button" class="cancel-button">取 消</a>
+                                                                <div class="d-flex align-items-center mx-2">
+                                                                    <input onclick="CancelAndCorrection(event)" id="CancelAndCorrection"
+                                                                        type="checkbox" class="mr-1" />
+                                                                    <label class="注文画面を省略" for="CancelAndCorrection">注文画面を省略</label>
+                                                                </div>
+                                                                <div class="d-flex" id="js_cancel_correction_btn">
+                                                                    <a type="button" class="correction-btn">訂正確認</a>
+                                                                    <a type="button" class="cancel-button">取消確認</a>
+                                                                </div>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -4493,8 +4619,8 @@
     </section>
 </body>
 
-<script src="./assets/js/main.js"></script>
 <script src="./assets/js/jquery/jquery.min.js"></script>
 <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+<script src="./assets/js/main.js"></script>
 
 </html>
