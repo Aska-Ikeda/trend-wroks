@@ -105,7 +105,9 @@ button:focus {
   outline: none;
   border: none;
 }
-
+a{
+  cursor: pointer;
+}
 .w-190 {
   width: 190px;
 }

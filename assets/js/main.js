@@ -80,6 +80,39 @@ function btnBuyCheckRegularOrder(e) {
 		$("#buy_js_to_regular_order").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
 	}
 }
+function RepaymentSaleNormal(e) {
+	if (e.target.checked == true) {
+		$("#js_repayment_normal_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+	}
+	if (e.target.checked == false) {
+		$("#js_repayment_normal_btn").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+	}
+}
+function ToStopNormalPaymentCheck(e) {
+	if (e.target.checked == true) {
+		$("#js_repayment_stop_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+	}
+	if (e.target.checked == false) {
+		$("#js_repayment_stop_btn").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+	}
+}
+function ToRepaymentSellStopPrice(e){
+	document.getElementById('返済売-通常返済へ').style.display="block";
+	document.getElementById('返済売-逆指値へ').style.display="none";
+
+}
+function RepaymentSaleToNormalRepayment(e){
+	document.getElementById('返済売-逆指値へ').style.display="block";
+	document.getElementById('返済売-通常返済へ').style.display="none";
+}
+function BuyStopPayment(e){
+	document.getElementById('返済買-逆指値へ').style.display="none";
+	document.getElementById('逆指値へ-通常返済へ').style.display="block";
+}
+function ToStopNormalPayment(e){
+	document.getElementById('返済買-逆指値へ').style.display="block";
+	document.getElementById('逆指値へ-通常返済へ').style.display="none";
+}
 function BuyOmitDetail(e) {
 	if (e.target.checked == true) {
 		$("#btn-buy-section").html(`<button type="button"
