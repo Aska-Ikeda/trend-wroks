@@ -28,38 +28,35 @@ function makeActivesell() {
 function OmitDetail(e) {
 	if (e.target.checked == true) {
 		$("#btn-sell-section").html(`<button type="button"
-		class="buy-confirmation-btn font-24 f-bold">買
-		い</button>`)
+		class="sell-confirmation-btn font-24 f-bold">売り確認</button>`)
 	}
 	if (e.target.checked == false) {
 		$("#btn-sell-section").html(`<button type="button"
-		class="sell-confirmation-btn font-24 f-bold">
-		売り確認
-		</button>`)
+		class="buy-confirmation-btn font-24 f-bold">買い確認</button>`)
 	}
 }
 function btnSellCheckRegularOrder(e) {
 	if (e.target.checked == true) {
-		$("#sell_js_to_regular_order").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+		$("#sell_js_to_regular_order").html(`<a href="" class="completed-btn"> 売り </a>`)
 	}
 	if (e.target.checked == false) {
-		$("#sell_js_to_regular_order").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+		$("#sell_js_to_regular_order").html(`<a href="" class="completed-btn"> 決 済 </a>`)
 	}
 }
 function RepaymentSaleCheck(e) {
 	if (e.target.checked == true) {
-		$("#js_repayment_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+		$("#js_repayment_btn").html(`<a href="" class="completed-btn"> 売り </a>`)
 	}
 	if (e.target.checked == false) {
-		$("#js_repayment_btn").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+		$("#js_repayment_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
 	}
 }
 function RepaymentPurchaseCheck(e) {
 	if (e.target.checked == true) {
-		$("#js_repayment_Purchase_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+		$("#js_repayment_Purchase_btn").html(`<a href="" class="completed-btn"> 売り </a>`)
 	}
 	if (e.target.checked == false) {
-		$("#js_repayment_Purchase_btn").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+		$("#js_repayment_Purchase_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
 	}
 }
 function CancelAndCorrection(e) {
@@ -74,26 +71,26 @@ function CancelAndCorrection(e) {
 }
 function btnBuyCheckRegularOrder(e) {
 	if (e.target.checked == true) {
-		$("#buy_js_to_regular_order").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+		$("#buy_js_to_regular_order").html(`<a href="" class="completed-btn"> 買い </a>`)
 	}
 	if (e.target.checked == false) {
-		$("#buy_js_to_regular_order").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+		$("#buy_js_to_regular_order").html(`<a href="" class="completed-btn"> 買い確認 </a>`)
 	}
 }
 function RepaymentSaleNormal(e) {
 	if (e.target.checked == true) {
-		$("#js_repayment_normal_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+		$("#js_repayment_normal_btn").html(`<a href="" class="completed-btn"> 売り </a>`)
 	}
 	if (e.target.checked == false) {
-		$("#js_repayment_normal_btn").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+		$("#js_repayment_normal_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
 	}
 }
 function ToStopNormalPaymentCheck(e) {
 	if (e.target.checked == true) {
-		$("#js_repayment_stop_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
+		$("#js_repayment_stop_btn").html(`<a href="" class="completed-btn"> 売り </a>`)
 	}
 	if (e.target.checked == false) {
-		$("#js_repayment_stop_btn").html(`<a href="" class="completed-btn"> 売り確認 </a>`)
+		$("#js_repayment_stop_btn").html(`<a href="" class="completed-btn"> 決 済 </a>`)
 	}
 }
 function ToRepaymentSellStopPrice(e){
@@ -116,14 +113,11 @@ function ToStopNormalPayment(e){
 function BuyOmitDetail(e) {
 	if (e.target.checked == true) {
 		$("#btn-buy-section").html(`<button type="button"
-		class="buy-confirmation-btn font-24 f-bold">買
-		い</button>`)
+		class="sell-confirmation-btn font-24 f-bold">買い</button>`)
 	}
 	if (e.target.checked == false) {
 		$("#btn-buy-section").html(`<button type="button"
-		class="sell-confirmation-btn font-24 f-bold">
-		売り確認
-		</button>`)
+		class="buy-confirmation-btn font-24 f-bold">売り確認</button>`)
 	}
 }
 function sellBtn(e){
