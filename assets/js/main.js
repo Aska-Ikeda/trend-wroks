@@ -50,7 +50,7 @@ function BuyOmitDetail(e) {
 	}
 	if (e.target.checked == false) {
 		$("#btn-buy-section").html(`<button type="button"
-		class="buy-confirmation-btn font-24 f-bold">売り確認</button>`)
+		class="buy-confirmation-btn font-24 f-bold">買い確認</button>`)
 	}
 }
 function RepaymentSaleCheck(e) {
